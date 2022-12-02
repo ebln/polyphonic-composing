@@ -15,8 +15,14 @@ class ExoCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $output->writeln('Exo-Command started…');
-        $service = new ExobionticService();
 
+
+        $parasite = shell_exec('php parasite/entry.php');
+
+
+        $output->writeln($parasite);
+
+        $service = new ExobionticService();
         $output->writeln($service->act());
 
         return Command::SUCCESS;
