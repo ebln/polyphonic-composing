@@ -17,5 +17,11 @@
         "allow-plugins": {
             "ergebnis/composer-normalize": true
         }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "echo Install PARASITE",
+            "cd parasite && composer install"
+        ]
     }
 }

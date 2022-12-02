@@ -1,0 +1,13 @@
+parameters:
+    dummy.parameter: "FOOBAR"
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Ebln\ParasiteDemo\Endobiont\:
+        resource: 'src/*'
+
+    Ebln\ParasiteDemo\Endobiont\EndobionticService:
+        public: true
