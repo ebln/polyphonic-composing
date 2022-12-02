@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+    php:
+        build:
+            context: .
+        image: php8.1-cli/parasite
+        volumes:
+            - ./..:/var/www
+        extra_hosts:
+            - "host.docker.internal:${XDEBUG_REMOTE_HOST:-127.0.0.1}"
+        environment:
+            PHP_IDE_CONFIG: "serverName=php-cli-81.local"
