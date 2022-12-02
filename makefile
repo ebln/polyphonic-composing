@@ -28,5 +28,5 @@ enter:##Log into the main container
 	$(DOCKER_COMPOSE) run --rm ${DEFAULT_CONTAINER} /bin/bash
 
 run:##Run
-	$(DOCKER_COMPOSE) run --rm ${DEFAULT_CONTAINER} php src/entry.php
+	$(DOCKER_COMPOSE) run --rm ${DEFAULT_CONTAINER} php src/entry.php app:run
 

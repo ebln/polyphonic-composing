@@ -10,4 +10,9 @@ class ExobionticService
     {
         // $foo = new Ebln\ParasiteDemo\Endobiont\EndobionticService(); // expected to fail!
     }
+
+    public function act(): string
+    {
+        return 'Exobiontic action!';
+    }
 }

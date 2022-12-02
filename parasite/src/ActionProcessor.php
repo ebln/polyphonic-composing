@@ -8,6 +8,6 @@ class ActionProcessor
 {
     public function process(): string
     {
-        return 'PROCESSED!';
+        return 'Endobiontic action was PROCESSED!';
     }
 }
