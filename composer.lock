@@ -4,8 +4,34 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d406531d705246ae00382d71ee9db985",
+    "content-hash": "e742cdc61927e1a57dbbe426e6915528",
     "packages": [
+        {
+            "name": "ebln/provoke-composer-conflict-foo",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ebln/provoke-composer-conflict-foo.git",
+                "reference": "a1ab6b255ba2ca1d22bb75b102f8b174756a8e68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ebln/provoke-composer-conflict-foo/zipball/a1ab6b255ba2ca1d22bb75b102f8b174756a8e68",
+                "reference": "a1ab6b255ba2ca1d22bb75b102f8b174756a8e68",
+                "shasum": ""
+            },
+            "conflict": {
+                "ebln/provoke-composer-conflict-bar": "*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Cannot be installed together with ebln/provoke-composer-conflict-bar",
+            "support": {
+                "issues": "https://github.com/ebln/provoke-composer-conflict-foo/issues",
+                "source": "https://github.com/ebln/provoke-composer-conflict-foo/tree/v0.1.0"
+            },
+            "time": "2023-03-23T14:09:30+00:00"
+        },
         {
             "name": "psr/container",
             "version": "2.0.2",
