@@ -11,7 +11,9 @@ $loader           = new YamlFileLoader($containerBuilder, new FileLocator(__DIR_
 $loader->load('services.yaml');
 $containerBuilder->compile();
 
+$args = $argv;
+
 /** @var \Ebln\ParasiteDemo\Endobiont\EndobionticService::class $service */
 $service = $containerBuilder->get(\Ebln\ParasiteDemo\Endobiont\EndobionticService::class);
 
-echo PHP_EOL . PHP_EOL . $service->act() . PHP_EOL;
+echo $service->serialize();

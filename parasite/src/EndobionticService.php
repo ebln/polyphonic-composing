@@ -10,8 +10,10 @@ class EndobionticService
     {
     }
 
-    public function act(): string
+    public function serialize(): string
     {
-        return $this->actionProcessor->process();
+        $result = $this->actionProcessor->process();
+
+        return serialize($result);
     }
 }
