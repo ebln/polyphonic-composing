@@ -1,9 +1,10 @@
 {
     "name": "ebln/parasite",
     "type": "library",
+    "description": "Experimenting on running different composer.jsons within the same codebase",
     "require": {
         "php": "^8.1",
-        "ebln/provoke-composer-conflict-foo": "^0.1.0",
+        "ebln/provoke-composer-conflict-foo": "^0.1.1",
         "symfony/config": "^6.2",
         "symfony/console": "^6.2",
         "symfony/dependency-injection": "^6.2",
@@ -28,7 +29,8 @@
     "scripts": {
         "post-autoload-dump": [
             "echo Install PARASITE",
-            "cd parasite && composer install"
+            "cd parasite/alpha && composer install",
+            "echo TODO → automate that for all directories in parasite!"
         ]
     }
 }

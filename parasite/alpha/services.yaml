@@ -9,7 +9,6 @@ services:
             tags: [ 'console.command' ]
 
     Ebln\ParasiteDemo\:
-        resource: 'src/*'
+        resource: 'src/{Ravelin,Symbiont}'
         exclude:
             - 'src/*/Contract/*'
-            - 'src/Symbiont/*'

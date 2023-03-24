@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Ebln\ParasiteDemo\Endobiont;
+namespace Ebln\ParasiteDemo\Symbiont\Service;
 
 use Ebln\ParasiteDemo\Ravelin\Transceiver\AlphaReceiver;
 
-class EndobionticService
+class AlphaHandler
 {
-    public function __construct(private ActionProcessor $actionProcessor, private AlphaReceiver $receiver)
+    public function __construct(private AlphaProcessor $actionProcessor, private AlphaReceiver $receiver)
     {
     }
 
-    public function handle(): void
+    public function handle(string $message): void
     {
-        $request = $this->receiver->getRequest();
+        $request = $this->receiver->getRequest($message);
         if (!$request) {
             // log!
             return;

@@ -1,7 +1,19 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+switch (getenv('APP_SYMBIONT')) {
+    case 'alpha':
+        $appName = 'parasite-alpha';
+        $alInfix = 'parasite/alpha/';
+        $yaml    = $alInfix . 'services.yaml';
+        break;
+    default:
+        $appName = 'app-root';
+        $alInfix = '';
+        $yaml    = 'config/services.yaml';
+}
+
+require __DIR__ . '/../' . $alInfix . 'vendor/autoload.php';
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Console\Application;
@@ -11,10 +23,11 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 $containerBuilder = new ContainerBuilder();
 $loader           = new YamlFileLoader($containerBuilder, new FileLocator(__DIR__ . '/..'));
-$loader->load('config/services.yaml');
+$loader->load($yaml);
+
 $containerBuilder->addCompilerPass(new AddConsoleCommandPass());
 $containerBuilder->compile();
 
-$application = new Application();
+$application = new Application($appName);
 $application->setCommandLoader($containerBuilder->get('console.command_loader'));
 $application->run();

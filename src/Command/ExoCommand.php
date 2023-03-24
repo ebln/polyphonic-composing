@@ -24,15 +24,15 @@ class ExoCommand extends Command
     {
         $output->writeln('Exo-Command started…');
 
-        // TODO use unix socket
+        // TODO use/try unix sockets!
 
-        $output->writeln('==== ENDOBIONT = RAW =====');
+        $output->writeln('==== ENDOBIONT = CALL =====');
 
         $request      = new AlphaRequest('REQUEST', ['parameter' => ['foo', 42]]);
         $deserialized = $this->alphaTransceiver->call($request);
 
         $output->writeln(json_encode($deserialized, JSON_PRETTY_PRINT));
-        $output->writeln('==== ENDOBIONT = END =====');
+        $output->writeln('==== ENDOBIONT == END =====');
 
         $output->writeln($this->exobionticService->act());
 

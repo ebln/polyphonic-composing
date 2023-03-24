@@ -11,4 +11,4 @@
 /phpunit.xml
 /var/*
 /vendor/
-/parasite/vendor/
+/parasite/*/vendor/

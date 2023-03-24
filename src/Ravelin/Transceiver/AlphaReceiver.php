@@ -9,9 +9,9 @@ use Ebln\ParasiteDemo\Ravelin\Contract\AlphaResponse;
 
 class AlphaReceiver
 {
-    public function getRequest(): AlphaRequest
+    public function getRequest(string $message): AlphaRequest
     {
-        return unserialize($_SERVER['argv'][1], ['allowed_classes' => [AlphaRequest::class], 'max_depth' => 7]);
+        return unserialize($message, ['allowed_classes' => [AlphaRequest::class], 'max_depth' => 7]);
     }
 
     public function reply(AlphaResponse $response): void
