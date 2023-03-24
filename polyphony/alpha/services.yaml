@@ -1,0 +1,14 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+    _instanceof:
+        \Symfony\Component\Console\Command\Command:
+            tags: [ 'console.command' ]
+
+    Ebln\PolyphonicComposing\:
+        resource: 'src/{Ravelin,Symbiont}'
+        exclude:
+            - 'src/*/Contract/*'

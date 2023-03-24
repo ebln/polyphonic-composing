@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ebln\ParasiteDemo\Interface;
+namespace Ebln\PolyphonicComposing\Ravelin\Contract;
 
-class ExobionticRequest
+final class AlphaRequest
 {
     public function __construct(public string $topic, public array $payload)
     {

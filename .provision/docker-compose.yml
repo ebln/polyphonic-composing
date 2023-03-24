@@ -3,7 +3,7 @@ services:
     php:
         build:
             context: .
-        image: php8.1-cli/parasite
+        image: php8.1-cli/polyphony
         volumes:
             - ./..:/var/www
         extra_hosts:

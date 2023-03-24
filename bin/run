@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+
+switch (getenv('APP_SYMBIONT')) {
+    case 'alpha':
+        $appName = 'polyphony-alpha';
+        $alInfix = 'polyphony/alpha/';
+        $yaml    = $alInfix . 'services.yaml';
+        break;
+    default:
+        $appName = 'app-root';
+        $alInfix = '';
+        $yaml    = 'config/services.yaml';
+}
+
+require __DIR__ . '/../' . $alInfix . 'vendor/autoload.php';
+
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\DependencyInjection\AddConsoleCommandPass;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+
+$containerBuilder = new ContainerBuilder();
+$loader           = new YamlFileLoader($containerBuilder, new FileLocator(__DIR__ . '/..'));
+$loader->load($yaml);
+
+$containerBuilder->addCompilerPass(new AddConsoleCommandPass());
+$containerBuilder->compile();
+
+$application = new Application($appName);
+$application->setCommandLoader($containerBuilder->get('console.command_loader'));
+$application->run();

@@ -1,19 +1,25 @@
 {
-    "name": "ebln/parasite",
+    "name": "ebln/polyphonic-composing",
     "type": "library",
+    "description": "Experimenting on running different composer.jsons within the same codebase",
     "require": {
-        "php": "^8.1 || ^8.2",
+        "php": "^8.1",
+        "ebln/provoke-composer-conflict-foo": "^0.1.1",
+        "symfony/config": "^6.2",
         "symfony/console": "^6.2",
-        "ebln/provoke-composer-conflict-foo": "^0.1.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Ebln\\ParasiteDemo\\": "src/"
-        },
-        "exclude-from-classmap": ["parasite/"]
+        "symfony/dependency-injection": "^6.2",
+        "symfony/yaml": "^6.2"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.29"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ebln\\PolyphonicComposing\\": "src/"
+        },
+        "exclude-from-classmap": [
+            "src/Symbiont/**"
+        ]
     },
     "config": {
         "allow-plugins": {
@@ -22,8 +28,8 @@
     },
     "scripts": {
         "post-autoload-dump": [
-            "echo Install PARASITE",
-            "cd parasite && composer install"
+            "echo Install polyphonic composer.jsons",
+            "cd polyphony/alpha && composer install"
         ]
     }
 }
