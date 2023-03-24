@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Ebln\ParasiteDemo\Ravelin\Transceiver;
+namespace Ebln\PolyphonicComposing\Ravelin\Transceiver;
 
-use Ebln\ParasiteDemo\Ravelin\Contract\AlphaRequest;
-use Ebln\ParasiteDemo\Ravelin\Contract\AlphaResponse;
+use Ebln\PolyphonicComposing\Ravelin\Contract\AlphaRequest;
+use Ebln\PolyphonicComposing\Ravelin\Contract\AlphaResponse;
 
-class AlphaReceiver
+final class AlphaReceiver
 {
     public function getRequest(string $message): AlphaRequest
     {

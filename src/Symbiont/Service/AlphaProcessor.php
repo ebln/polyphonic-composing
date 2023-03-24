@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Ebln\ParasiteDemo\Symbiont\Service;
+namespace Ebln\PolyphonicComposing\Symbiont\Service;
 
 use Ebln\Composer\Debug\ProvokeConflict\Creed;
-use Ebln\ParasiteDemo\Ravelin\Contract\AlphaResponse;
-use Ebln\ParasiteDemo\Ravelin\Contract\AlphaRequest;
+use Ebln\PolyphonicComposing\Ravelin\Contract\AlphaRequest;
+use Ebln\PolyphonicComposing\Ravelin\Contract\AlphaResponse;
 
-class AlphaProcessor
+final class AlphaProcessor
 {
     public function process(AlphaRequest $request): AlphaResponse
     {

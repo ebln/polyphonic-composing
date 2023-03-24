@@ -1,5 +1,5 @@
 {
-    "name": "ebln/parasite",
+    "name": "ebln/polyphonic-composing",
     "type": "library",
     "description": "Experimenting on running different composer.jsons within the same codebase",
     "require": {
@@ -15,10 +15,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Ebln\\ParasiteDemo\\": "src/"
+            "Ebln\\PolyphonicComposing\\": "src/"
         },
         "exclude-from-classmap": [
-            "parasite/"
+            "src/Symbiont/**"
         ]
     },
     "config": {
@@ -28,9 +28,8 @@
     },
     "scripts": {
         "post-autoload-dump": [
-            "echo Install PARASITE",
-            "cd parasite/alpha && composer install",
-            "echo TODO → automate that for all directories in parasite!"
+            "echo Install polyphonic composer.jsons",
+            "cd polyphony/alpha && composer install"
         ]
     }
 }

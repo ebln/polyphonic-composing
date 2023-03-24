@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ebln\ParasiteDemo\Ravelin\Contract;
+namespace Ebln\PolyphonicComposing\Ravelin\Contract;
 
 interface ResponseInterface
 {

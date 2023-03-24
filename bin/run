@@ -3,8 +3,8 @@
 
 switch (getenv('APP_SYMBIONT')) {
     case 'alpha':
-        $appName = 'parasite-alpha';
-        $alInfix = 'parasite/alpha/';
+        $appName = 'polyphony-alpha';
+        $alInfix = 'polyphony/alpha/';
         $yaml    = $alInfix . 'services.yaml';
         break;
     default:

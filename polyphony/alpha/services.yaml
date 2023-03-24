@@ -8,7 +8,7 @@ services:
         \Symfony\Component\Console\Command\Command:
             tags: [ 'console.command' ]
 
-    Ebln\ParasiteDemo\:
+    Ebln\PolyphonicComposing\:
         resource: 'src/{Ravelin,Symbiont}'
         exclude:
             - 'src/*/Contract/*'

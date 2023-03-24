@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Ebln\ParasiteDemo\Symbiont\Service;
+namespace Ebln\PolyphonicComposing\Symbiont\Service;
 
-use Ebln\ParasiteDemo\Ravelin\Transceiver\AlphaReceiver;
+use Ebln\PolyphonicComposing\Ravelin\Transceiver\AlphaReceiver;
 
-class AlphaHandler
+final class AlphaHandler
 {
     public function __construct(private AlphaProcessor $actionProcessor, private AlphaReceiver $receiver)
     {

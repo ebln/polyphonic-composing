@@ -1,5 +1,5 @@
 {
-    "name": "ebln/parasite-endobiont",
+    "name": "ebln/polyphonic-composing-alpha",
     "type": "library",
     "description": "Experimenting on running different composer.jsons within the same codebase",
     "require": {
@@ -12,8 +12,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Ebln\\ParasiteDemo\\Symbiont\\": "../../src/Symbiont/",
-            "Ebln\\ParasiteDemo\\Ravelin\\": "../../src/Ravelin/"
+            "Ebln\\PolyphonicComposing\\Symbiont\\": "../../src/Symbiont/",
+            "Ebln\\PolyphonicComposing\\Ravelin\\": "../../src/Ravelin/"
         }
     }
 }

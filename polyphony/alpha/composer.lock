@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c947efeabfeed8a6cc6838179668eb0",
+    "content-hash": "99abdd4807ed08425c500ff65dd15125",
     "packages": [
         {
             "name": "ebln/provoke-composer-conflict-bar",

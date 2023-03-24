@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ebln\ParasiteDemo\Ravelin\Contract;
+namespace Ebln\PolyphonicComposing\Ravelin\Contract;
 
-class AlphaRequest
+final class AlphaRequest
 {
     public function __construct(public string $topic, public array $payload)
     {
