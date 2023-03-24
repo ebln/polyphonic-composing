@@ -4,16 +4,24 @@ declare(strict_types=1);
 
 namespace Ebln\ParasiteDemo\Endobiont;
 
+use Ebln\ParasiteDemo\Ravelin\Transceiver\AlphaReceiver;
+
 class EndobionticService
 {
-    public function __construct(private ActionProcessor $actionProcessor)
+    public function __construct(private ActionProcessor $actionProcessor, private AlphaReceiver $receiver)
     {
     }
 
-    public function serialize(): string
+    public function handle(): void
     {
-        $result = $this->actionProcessor->process();
+        $request = $this->receiver->getRequest();
+        if (!$request) {
+            // log!
+            return;
+        }
 
-        return serialize($result);
+        $this->receiver->reply(
+            $this->actionProcessor->process($request)
+        );
     }
 }

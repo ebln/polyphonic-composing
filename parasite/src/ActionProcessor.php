@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace Ebln\ParasiteDemo\Endobiont;
 
-use Ebln\ParasiteDemo\Interface\EndobionticResult;
-use Ebln\ParasiteDemo\Interface\ExobionticRequest;
+use Ebln\ParasiteDemo\Ravelin\Contract\AlphaResponse;
+use Ebln\ParasiteDemo\Ravelin\Contract\AlphaRequest;
 
 class ActionProcessor
 {
-    public function process(): EndobionticResult
+    public function process(AlphaRequest $request): AlphaResponse
     {
-        $rawinput     = $_SERVER['argv'][1];
-        $deserialized = unserialize($rawinput, ['allowed_classes' => [ExobionticRequest::class], 'max_depth' => 7]);
-
-        return new EndobionticResult('EndobionticResult', ['desc' => 'Endobiontic action was PROCESSED!', 'input_raw' => $rawinput, 'deserialized' => $deserialized]);
+        return new AlphaResponse(
+            'Result from endobiontic process',
+            ['desc' => 'Endobiontic action was PROCESSED!'],
+            $request
+        );
     }
 }

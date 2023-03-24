@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ebln\ParasiteDemo;
+namespace Ebln\ParasiteDemo\Service;
 
 class ExobionticService
 {

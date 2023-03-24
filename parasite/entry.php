@@ -16,4 +16,4 @@ $args = $argv;
 /** @var \Ebln\ParasiteDemo\Endobiont\EndobionticService::class $service */
 $service = $containerBuilder->get(\Ebln\ParasiteDemo\Endobiont\EndobionticService::class);
 
-echo $service->serialize();
+$service->handle();

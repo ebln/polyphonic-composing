@@ -11,7 +11,7 @@
     "autoload": {
         "psr-4": {
             "Ebln\\ParasiteDemo\\Endobiont\\": "src/",
-            "Ebln\\ParasiteDemo\\Interface\\": "../src/Interface/"
+            "Ebln\\ParasiteDemo\\Ravelin\\": "../src/Ravelin/"
         }
     }
 }
